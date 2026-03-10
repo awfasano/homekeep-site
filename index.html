@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeKeep | Home Maintenance</title>
+    <meta name="description" content="HomeKeep helps homeowners stay ahead of maintenance with recurring reminders, seasonal planning, clear task guidance, and home screen widgets.">
+    <style>
+        :root {
+            --navy: #1a2a4a;
+            --navy-deep: #122038;
+            --navy-soft: #34557a;
+            --amber: #f5a623;
+            --amber-soft: rgba(245, 166, 35, 0.12);
+            --green: #27ae60;
+            --surface: rgba(255, 255, 255, 0.9);
+            --surface-strong: #ffffff;
+            --text-primary: #172033;
+            --text-secondary: #5a677a;
+            --border: rgba(26, 42, 74, 0.1);
+            --shadow: 0 24px 70px rgba(18, 32, 56, 0.12);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --navy: #dbe6f7;
+                --navy-deep: #eef4fd;
+                --navy-soft: #a2bddc;
+                --amber: #ffba3a;
+                --amber-soft: rgba(255, 186, 58, 0.12);
+                --green: #4ecf80;
+                --surface: rgba(13, 24, 40, 0.9);
+                --surface-strong: #101a2d;
+                --text-primary: #f3f7fc;
+                --text-secondary: #b4c0d3;
+                --border: rgba(219, 230, 247, 0.1);
+                --shadow: none;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text-primary);
+            background:
+                radial-gradient(circle at top left, rgba(245, 166, 35, 0.22), transparent 26%),
+                radial-gradient(circle at top right, rgba(39, 174, 96, 0.14), transparent 22%),
+                linear-gradient(180deg, #f4f7fb 0%, #eef3f9 100%);
+            line-height: 1.55;
+            min-height: 100vh;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background:
+                    radial-gradient(circle at top left, rgba(245, 166, 35, 0.12), transparent 26%),
+                    radial-gradient(circle at top right, rgba(39, 174, 96, 0.10), transparent 22%),
+                    linear-gradient(180deg, #09111d 0%, #0d1728 100%);
+            }
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 28px 20px 72px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-badge {
+            width: 14px;
+            height: 14px;
+            border-radius: 999px;
+            background: var(--amber);
+            box-shadow: 0 0 0 7px var(--amber-soft);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navy-soft);
+            font-weight: 700;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.8fr);
+            gap: 24px;
+            align-items: stretch;
+            margin-bottom: 24px;
+        }
+
+        .hero-copy,
+        .hero-panel,
+        .section,
+        .feature {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-copy {
+            padding: 34px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy-soft);
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--green);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 5vw, 4.8rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            margin-bottom: 16px;
+            color: var(--navy-deep);
+        }
+
+        .hero p {
+            max-width: 640px;
+            font-size: 1.08rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: transform 0.18s ease, opacity 0.18s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            opacity: 0.96;
+        }
+
+        .button-primary {
+            background: var(--navy-deep);
+            color: #ffffff;
+        }
+
+        .button-secondary {
+            background: var(--amber);
+            color: #1d2330;
+        }
+
+        .hero-panel {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background:
+                linear-gradient(160deg, rgba(18, 32, 56, 0.98), rgba(39, 65, 95, 0.96));
+            color: #ffffff;
+        }
+
+        .hero-panel h2 {
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.68);
+            margin-bottom: 16px;
+        }
+
+        .stat {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 16px 0;
+        }
+
+        .stat:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.76);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .feature {
+            padding: 22px;
+        }
+
+        .feature-badge {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(245, 166, 35, 0.18), rgba(26, 42, 74, 0.08));
+            margin-bottom: 16px;
+        }
+
+        .feature h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--navy-deep);
+        }
+
+        .feature p {
+            color: var(--text-secondary);
+        }
+
+        .section {
+            padding: 30px;
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            font-size: 1.55rem;
+            margin-bottom: 10px;
+            color: var(--navy-deep);
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            max-width: 760px;
+        }
+
+        .bullet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 28px;
+            margin-top: 20px;
+        }
+
+        .bullet {
+            padding-left: 18px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .bullet::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--amber);
+        }
+
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .trust-pill {
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(26, 42, 74, 0.07);
+            color: var(--navy-soft);
+            font-weight: 700;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer a {
+            color: var(--navy-soft);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .feature-grid,
+            .bullet-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .hero-copy,
+            .hero-panel,
+            .section,
+            .feature {
+                border-radius: 22px;
+            }
+
+            .hero-copy,
+            .hero-panel,
+            .section {
+                padding: 24px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+                <span class="brand-badge"></span>
+                <span>HomeKeep</span>
+            </a>
+            <div class="nav-links">
+                <a href="support.html">Support</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">Home maintenance, without the mental overhead</div>
+                <h1>Stay ahead of the work your home quietly needs.</h1>
+                <p>HomeKeep gives homeowners recurring reminders, seasonal planning, clear task guidance, and clean widgets so the important stuff gets done before it turns into an expensive surprise.</p>
+                <div class="cta-row">
+                    <a class="button button-primary" href="support.html">Get Support</a>
+                    <a class="button button-secondary" href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <aside class="hero-panel">
+                <div>
+                    <h2>Why people choose it</h2>
+                    <div class="stat">
+                        <span class="stat-value">No subscription</span>
+                        <span class="stat-label">Buy it once and keep using it.</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">On-device first</span>
+                        <span class="stat-label">Your maintenance data stays local.</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">Built for real homes</span>
+                        <span class="stat-label">Tasks, seasons, reminders, widgets, and custom work in one place.</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="feature-grid">
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Recurring reminders</h3>
+                <p>Know what is due now, what is coming next, and what can wait a little longer.</p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Seasonal planning</h3>
+                <p>Move from reactive fixes to a rhythm that matches spring, summer, fall, winter, and year-round upkeep.</p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Clear task guidance</h3>
+                <p>See why a task matters, what it usually costs, and how much time it tends to take.</p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Organized views</h3>
+                <p>Browse by task priority, calendar date, property, category, or season depending on how you think.</p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Home screen widgets</h3>
+                <p>See upcoming work and maintenance status at a glance without opening the app.</p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-badge"></div>
+                <h3>Custom tasks</h3>
+                <p>Add your own routines, duplicate existing tasks, and tailor the app to your home.</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>What HomeKeep is built to do</h2>
+            <p>Most homeowners do not need another bloated subscription app. They need one place to remember recurring maintenance, understand what matters, and keep the house from drifting into deferred upkeep.</p>
+            <div class="bullet-grid">
+                <div class="bullet">Track recurring home maintenance without creating an account.</div>
+                <div class="bullet">Manage multiple properties with separate task histories.</div>
+                <div class="bullet">Use widgets and reminders to stay ahead of the next due item.</div>
+                <div class="bullet">Keep notes, links, and completion history attached to each task.</div>
+            </div>
+            <div class="trust-row">
+                <span class="trust-pill">One-time purchase</span>
+                <span class="trust-pill">Local notifications</span>
+                <span class="trust-pill">Widget support</span>
+                <span class="trust-pill">No account required</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>&copy; 2026 HomeKeep</span>
+            <div class="footer-links">
+                <a href="support.html">Support</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

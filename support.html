@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeKeep | Support</title>
+    <style>
+        :root {
+            --navy: #1a2a4a;
+            --navy-deep: #122038;
+            --navy-soft: #27415f;
+            --amber: #f5a623;
+            --green: #27ae60;
+            --text-primary: #172033;
+            --text-secondary: #556072;
+            --surface: rgba(255, 255, 255, 0.9);
+            --surface-strong: #ffffff;
+            --border: rgba(26, 42, 74, 0.12);
+            --shadow: 0 22px 60px rgba(18, 32, 56, 0.12);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --navy: #d7e3f3;
+                --navy-deep: #e7eef9;
+                --navy-soft: #93b1d5;
+                --amber: #ffba3a;
+                --green: #49c97a;
+                --text-primary: #f3f6fb;
+                --text-secondary: #b2bfd2;
+                --surface: rgba(14, 24, 40, 0.92);
+                --surface-strong: #101a2d;
+                --border: rgba(215, 227, 243, 0.12);
+                --shadow: none;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text-primary);
+            background:
+                radial-gradient(circle at top left, rgba(245, 166, 35, 0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(39, 174, 96, 0.12), transparent 26%),
+                linear-gradient(180deg, #f4f7fb 0%, #eef3f9 100%);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background:
+                    radial-gradient(circle at top left, rgba(245, 166, 35, 0.12), transparent 28%),
+                    radial-gradient(circle at bottom right, rgba(39, 174, 96, 0.10), transparent 26%),
+                    linear-gradient(180deg, #0b1321 0%, #0d1728 100%);
+            }
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 20px 72px;
+        }
+
+        .hero {
+            background: linear-gradient(145deg, rgba(18, 32, 56, 0.97), rgba(39, 65, 95, 0.94));
+            color: #ffffff;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 18px;
+        }
+
+        .brand-badge {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            background: var(--amber);
+            box-shadow: 0 0 0 6px rgba(245, 166, 35, 0.14);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.3rem, 4vw, 3.7rem);
+            line-height: 1.05;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            max-width: 640px;
+            font-size: 1.02rem;
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.18s ease, opacity 0.18s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            opacity: 0.95;
+        }
+
+        .button-primary {
+            background: var(--amber);
+            color: #1c2230;
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .card,
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .card {
+            padding: 24px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--navy-deep);
+        }
+
+        .card p,
+        .card li,
+        .section p,
+        .section li {
+            color: var(--text-secondary);
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(26, 42, 74, 0.07);
+            color: var(--navy-soft);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .checklist li {
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .checklist li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--green);
+        }
+
+        .section {
+            padding: 26px;
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            font-size: 1.35rem;
+            margin-bottom: 14px;
+            color: var(--navy-deep);
+        }
+
+        details {
+            border-top: 1px solid var(--border);
+            padding: 16px 0;
+        }
+
+        details:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        summary {
+            cursor: pointer;
+            list-style: none;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding-right: 28px;
+            position: relative;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: -2px;
+            font-size: 1.3rem;
+            color: var(--amber);
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details p {
+            padding-top: 10px;
+        }
+
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .link-row a {
+            color: var(--navy-soft);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding-top: 10px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        @media (max-width: 780px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .card,
+            .section {
+                border-radius: 22px;
+            }
+
+            .hero {
+                padding: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="brand">
+                <span class="brand-badge"></span>
+                <span>HomeKeep</span>
+            </div>
+            <h1>Support that gets you unstuck fast.</h1>
+            <p>Questions, bug reports, notification issues, and setup help for HomeKeep - Home Maintenance. Everything here is written for real use, not generic support filler.</p>
+            <div class="hero-links">
+                <a class="button button-primary" href="mailto:support@homekeep.app?subject=HomeKeep%20Support">Email Support</a>
+                <a class="button button-secondary" href="https://github.com/awfasano/homekeep-site/issues" target="_blank" rel="noopener">Open a Support Issue</a>
+                <a class="button button-secondary" href="index.html">View Marketing Page</a>
+            </div>
+        </section>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Fastest ways to get help</h2>
+                <p>If something is broken, include your iPhone or iPad model, iOS version, and what you expected to happen. That cuts the back-and-forth and makes support much faster.</p>
+                <div class="pill-row">
+                    <span class="pill">One-time purchase</span>
+                    <span class="pill">On-device data</span>
+                    <span class="pill">Local notifications</span>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Common fixes</h2>
+                <ul class="checklist">
+                    <li>Re-open the app after changing notification permissions.</li>
+                    <li>Use Settings to refresh local notifications if reminders look stale.</li>
+                    <li>Remove and re-add widgets if iOS is showing a cached snapshot.</li>
+                    <li>Update to the latest build before reporting visual issues.</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <details open>
+                <summary>Does HomeKeep need an internet connection?</summary>
+                <p>No for core use. Your properties, tasks, history, and reminders stay on your device. Optional resource links and web searches open in your browser when you choose to use them.</p>
+            </details>
+
+            <details>
+                <summary>Is HomeKeep a subscription?</summary>
+                <p>No. HomeKeep is a one-time purchase with no recurring subscription and no in-app purchases.</p>
+            </details>
+
+            <details>
+                <summary>Why are my notifications missing?</summary>
+                <p>Check iOS notification permissions first, then confirm reminders are enabled in the app and on the task itself. If timing still looks wrong, use the notification refresh action in Settings and reopen the app once.</p>
+            </details>
+
+            <details>
+                <summary>Where is my data stored?</summary>
+                <p>Your data is stored locally on your device. HomeKeep does not require an account and does not sync your maintenance data to a remote server.</p>
+            </details>
+
+            <details>
+                <summary>Can I add my own maintenance tasks?</summary>
+                <p>Yes. You can create custom tasks, duplicate existing tasks, attach notes, and save a reference link for task-specific guidance.</p>
+            </details>
+
+            <details>
+                <summary>Do widgets update automatically?</summary>
+                <p>Yes. Widgets refresh over time and also update after key app changes, but iOS can cache snapshots. If the widget looks stale, remove and add it again.</p>
+            </details>
+
+            <details>
+                <summary>How many properties can I manage?</summary>
+                <p>HomeKeep currently supports up to three properties, each with its own task set and maintenance history.</p>
+            </details>
+
+            <details>
+                <summary>How do I report a bug or request a feature?</summary>
+                <p>Email <a href="mailto:support@homekeep.app?subject=HomeKeep%20Bug%20Report">support@homekeep.app</a> or open a ticket on <a href="https://github.com/awfasano/homekeep-site/issues" target="_blank" rel="noopener">GitHub Issues</a> with a short description, your device model, and iOS version. Screenshots are helpful when the issue is visual.</p>
+            </details>
+        </section>
+
+        <section class="section">
+            <h2>Helpful Links</h2>
+            <p>Use these pages for App Store Connect or to answer trust questions from users.</p>
+            <div class="link-row">
+                <a href="index.html">Marketing Page</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2026 HomeKeep</p>
+        </div>
+    </div>
+</body>
+</html>

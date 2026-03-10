@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - HomeKeep</title>
+    <style>
+        :root {
+            --navy: rgb(26, 42, 74);
+            --amber: rgb(245, 166, 35);
+            --text-primary: #1a1a2e;
+            --text-secondary: #555;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fa;
+            --border: #e0e0e0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --navy: rgb(140, 160, 200);
+                --amber: rgb(255, 184, 46);
+                --text-primary: #e8e8e8;
+                --text-secondary: #aaa;
+                --bg: #1a1a2e;
+                --bg-alt: #222240;
+                --border: #333;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid var(--amber);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .header .app-name {
+            font-size: 16px;
+            color: var(--amber);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .header .effective-date {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .highlight-box {
+            background-color: var(--bg-alt);
+            border-left: 4px solid var(--amber);
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 32px;
+        }
+
+        .highlight-box p {
+            font-size: 15px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 36px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin: 0 0 16px 24px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        a {
+            color: var(--amber);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-name">HomeKeep</div>
+            <h1>Privacy Policy</h1>
+            <div class="effective-date">Effective Date: February 17, 2026</div>
+        </div>
+
+        <div class="highlight-box">
+            <p>HomeKeep is designed with your privacy as a core principle. The app works on-device, collects no personal data, requires no account, and includes no analytics, tracking, or third-party SDKs. Your maintenance data never leaves your device.</p>
+        </div>
+
+        <h2>1. Overview</h2>
+        <p>This Privacy Policy describes how HomeKeep ("the App"), developed by HomeKeep ("we," "us," or "our"), handles information when you use our iOS application. We are committed to transparency and want you to understand that HomeKeep was intentionally built to respect your privacy completely.</p>
+
+        <h2>2. Information We Do Not Collect</h2>
+        <p>HomeKeep does <strong>not</strong> collect, store, transmit, or process any of the following:</p>
+        <ul>
+            <li><strong>Personal information</strong> -- no name, email address, phone number, or physical address</li>
+            <li><strong>Account credentials</strong> -- no account creation or login is required</li>
+            <li><strong>Device identifiers</strong> -- no device ID, advertising ID, or hardware identifiers</li>
+            <li><strong>Location data</strong> -- no GPS, IP-based location, or geolocation of any kind</li>
+            <li><strong>Usage analytics</strong> -- no tracking of how you use the app, session duration, screens viewed, or feature usage</li>
+            <li><strong>Crash reports</strong> -- no automated crash or diagnostic reporting to us or third parties</li>
+            <li><strong>Health or fitness data</strong></li>
+            <li><strong>Contacts, photos, or files</strong> from your device</li>
+            <li><strong>Financial information</strong> -- your App Store purchase is handled entirely by Apple; we never see or store payment details</li>
+        </ul>
+
+        <h2>3. Data Storage</h2>
+        <p>All data you create within HomeKeep -- including your property information, maintenance tasks, custom tasks, completion history, and notes -- is stored <strong>exclusively on your device</strong> using Apple's SwiftData framework. This data:</p>
+        <ul>
+            <li>Is never transmitted to any server, cloud service, or third party</li>
+            <li>Is never backed up to our servers (though it may be included in your iCloud or local device backups managed by Apple)</li>
+            <li>Remains entirely under your control</li>
+            <li>Is deleted when you uninstall the app</li>
+        </ul>
+
+        <h2>4. Network Activity</h2>
+        <p>HomeKeep functions on-device with one optional exception:</p>
+
+        <h3>4.1 Optional Resource Links and Web Searches</h3>
+        <p>The App includes optional reference links plus web and YouTube searches on task detail screens. When you use one of these actions, the App opens your device's default web browser or the relevant external app. This action:</p>
+        <ul>
+            <li>Opens Safari -- it is not a web view within the App</li>
+            <li>Is entirely user-initiated and optional</li>
+            <li>Does not transmit any data from the App to us</li>
+            <li>Is governed by Google's and Safari's respective privacy policies once the browser opens</li>
+        </ul>
+        <p>Apart from this user-initiated browser action, the App makes <strong>zero network requests</strong>.</p>
+
+        <h2>5. Third-Party Services and SDKs</h2>
+        <p>HomeKeep contains <strong>no third-party SDKs, analytics frameworks, advertising libraries, or tracking tools</strong>. Specifically, we do not use:</p>
+        <ul>
+            <li>Google Analytics, Firebase, or any analytics platform</li>
+            <li>Facebook SDK, Adjust, Branch, or any attribution service</li>
+            <li>AdMob, Unity Ads, or any advertising framework</li>
+            <li>Crashlytics, Sentry, Bugsnag, or any crash reporting service</li>
+            <li>Any social media SDKs or login services</li>
+        </ul>
+
+        <h2>6. Local Notifications</h2>
+        <p>HomeKeep uses Apple's local notification system to send you reminders about upcoming maintenance tasks. These notifications:</p>
+        <ul>
+            <li>Are scheduled entirely on your device</li>
+            <li>Do not use push notification servers or any remote service</li>
+            <li>Require your explicit permission to enable</li>
+            <li>Can be disabled at any time in the App's settings or your device's Settings app</li>
+            <li>Do not transmit any data off your device</li>
+        </ul>
+
+        <h2>7. Home Screen Widgets</h2>
+        <p>HomeKeep provides optional Home Screen widgets that display overdue task counts and upcoming tasks. Widget data is shared between the App and the widget extension using a local App Group container on your device. This data never leaves your device.</p>
+
+        <h2>8. Apple App Store Purchase</h2>
+        <p>HomeKeep is available as a one-time purchase through the Apple App Store. All payment processing is handled by Apple. We do not receive, process, or store any payment information, credit card numbers, or Apple ID details. Please refer to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> for information on how Apple handles your purchase data.</p>
+
+        <h2>9. Children's Privacy</h2>
+        <p>HomeKeep does not collect personal information from anyone, including children under the age of 13 (or the applicable age in your jurisdiction). Because the App collects no data whatsoever, it is inherently compliant with the Children's Online Privacy Protection Act (COPPA) and similar international regulations. However, the App is designed for homeowners and is not specifically directed at children.</p>
+
+        <h2>10. Your Rights Under GDPR</h2>
+        <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, you are entitled to certain data protection rights under the General Data Protection Regulation (GDPR). Because HomeKeep collects no personal data and has no user accounts, there is no personal data for us to access, rectify, erase, restrict, port, or otherwise process. You retain full control of your data on your device at all times.</p>
+
+        <h2>11. Your Rights Under CCPA / CPRA</h2>
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) provide you with specific rights regarding your personal information. Because HomeKeep does not collect, sell, or share any personal information, these provisions are inherently satisfied. We do not sell personal information. We do not share personal information for cross-context behavioral advertising.</p>
+
+        <h2>12. Data Retention</h2>
+        <p>Since all data is stored locally on your device, you control its retention entirely. You may:</p>
+        <ul>
+            <li>Delete individual tasks, properties, or completion records within the App</li>
+            <li>Uninstall the App to remove all associated data from your device</li>
+        </ul>
+        <p>We retain no data because we never receive any data.</p>
+
+        <h2>13. Data Security</h2>
+        <p>Your data benefits from the security protections built into iOS, including device encryption, the App Sandbox, and biometric/passcode device locks. Because your data stays on your device and is never transmitted, there is no risk of server-side data breaches involving your HomeKeep data.</p>
+
+        <h2>14. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. If we make material changes, we will update the "Effective Date" at the top of this page. We encourage you to review this Privacy Policy periodically. Your continued use of the App after any changes indicates your acceptance of the updated policy.</p>
+
+        <h2>15. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or HomeKeep's privacy practices, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@homekeep.app">support@homekeep.app</a></p>
+
+        <div class="footer">
+            <p>&copy; 2026 HomeKeep. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
