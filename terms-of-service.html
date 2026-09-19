@@ -4,169 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - HomeKeep</title>
-    <style>
-        :root {
-            --navy: rgb(26, 42, 74);
-            --amber: rgb(245, 166, 35);
-            --text-primary: #1a1a2e;
-            --text-secondary: #555;
-            --bg: #ffffff;
-            --bg-alt: #f8f9fa;
-            --border: #e0e0e0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --navy: rgb(140, 160, 200);
-                --amber: rgb(255, 184, 46);
-                --text-primary: #e8e8e8;
-                --text-secondary: #aaa;
-                --bg: #1a1a2e;
-                --bg-alt: #222240;
-                --border: #333;
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-primary);
-            background-color: var(--bg);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 24px 80px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 2px solid var(--amber);
-        }
-
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-
-        .header .app-name {
-            font-size: 16px;
-            color: var(--amber);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .header .effective-date {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .highlight-box {
-            background-color: var(--bg-alt);
-            border-left: 4px solid var(--amber);
-            padding: 20px 24px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 32px;
-        }
-
-        .highlight-box p {
-            font-size: 15px;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--navy);
-            margin-top: 36px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        h3 {
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-top: 24px;
-            margin-bottom: 8px;
-        }
-
-        p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        ul, ol {
-            margin: 0 0 16px 24px;
-            font-size: 15px;
-            color: var(--text-secondary);
-        }
-
-        ul li, ol li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: var(--text-primary);
-        }
-
-        a {
-            color: var(--amber);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 24px 16px 60px;
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css?v=20260919">
+    <link rel="icon" href="assets/app-icon.png">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="app-name">HomeKeep</div>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="wrap site-nav" aria-label="Main">
+            <a class="brand" href="./"><img src="assets/app-icon.png" alt="" width="36" height="36">HomeKeep</a>
+            <div class="nav-links">
+                <a href="resources/">Free checklists</a>
+                <a href="resources/partners.html">For professionals</a>
+                <a href="support.html">Support</a>
+            </div>
+            <a class="button compact" href="https://apps.apple.com/app/id6760328977">Get the app <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
+    <main id="main" class="wrap document-page">
+        <div class="page-heading">
             <h1>Terms of Service</h1>
-            <div class="effective-date">Effective Date: February 17, 2026</div>
+            <p>Effective Date: February 17, 2026</p>
         </div>
-
-        <div class="highlight-box">
+        <div class="document-content">
+        <div class="document-note">
             <p>Please read these Terms of Service carefully before using HomeKeep. By downloading, installing, or using the App, you agree to be bound by these terms.</p>
         </div>
 
@@ -277,9 +137,19 @@
         <p>If you have any questions about these Terms, please contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:awfasano@gmail.com">awfasano@gmail.com</a></p>
 
-        <div class="footer">
-            <p>&copy; 2026 HomeKeep. All rights reserved.</p>
         </div>
-    </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 HomeKeep. All rights reserved.</p>
+            <nav aria-label="Footer">
+                <a href="./">Home</a>
+                <a href="resources/">Free checklists</a>
+                <a href="support.html">Support</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
