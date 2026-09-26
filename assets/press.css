@@ -1,0 +1,45 @@
+/* Press layouts share HomeKeep's app-inspired site tokens and controls. */
+.press-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center;padding:64px 0 56px}
+.press-intro h1{margin:20px 0 24px;letter-spacing:-.05em}
+.press-intro .lede{max-width:540px}
+.press-intro-copy>.small{margin-top:22px;max-width:450px}
+.press-facts,.press-panel,.press-screen,.press-downloads{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.press-facts{padding:28px}
+.press-app{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.press-app img{border-radius:14px;width:64px;height:64px;flex:none}
+.press-app h2{font-size:23px;margin-bottom:5px}
+.press-app p{font-size:12px;color:var(--muted);line-height:1.4}
+.press-facts dl{margin:0 0 22px;font-size:14px}
+.press-facts dl>div{display:grid;grid-template-columns:92px 1fr;gap:15px;padding:12px 0;border-top:1px solid var(--line)}
+.press-facts dt{font-weight:650}
+.press-facts dd{margin:0;color:var(--muted)}
+.press-facts .text-link{font-size:14px}
+.press-section{padding:44px 0 0;border-top:1px solid var(--line);margin-bottom:44px}
+.press-descriptions{display:grid;grid-template-columns:1fr 1.6fr;gap:24px}
+.press-panel{padding:28px}
+.press-panel h3{font-size:23px;margin-bottom:16px;line-height:1.2}
+.press-panel p{font-size:15px;color:var(--muted)}
+.press-context{margin-top:22px;max-width:900px}
+.press-angles,.press-screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.press-angles .press-panel{display:flex;flex-direction:column}
+.press-angles .kicker{margin-bottom:22px}
+.press-angles a{display:inline-block;margin-top:22px;padding-top:0;font-size:14px;font-weight:650}
+.press-section-note{margin:-12px 0 26px;color:var(--muted);font-size:14px;max-width:800px}
+.press-screen{padding:24px;display:flex;flex-direction:column}
+.press-screen-image{display:flex;justify-content:center;padding:0 0 24px}
+.press-screen-image img{width:210px;max-width:100%;height:auto;border-radius:23px;border:3px solid #303034;background:#000}
+.press-screen figcaption{display:flex;flex-direction:column;flex:1}
+.press-screen h3{font-size:21px;line-height:1.2;margin-bottom:12px}
+.press-screen p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.press-screen a{font-size:13px;font-weight:650;margin-top:auto}
+.press-downloads{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:28px;margin-top:24px}
+.press-downloads h3{font-size:19px;margin-bottom:8px}
+.press-downloads p{font-size:13px;color:var(--muted);margin-bottom:10px}
+.press-downloads a{font-size:14px;font-weight:650}
+.press-icon-download{display:flex;align-items:center;gap:20px}
+.press-icon-download img{width:72px;height:72px;border-radius:16px;flex:none}
+.press-contact>div>a{font-size:14px}
+.press-updated{margin-top:18px}
+@media(max-width:900px){.press-intro{gap:32px;grid-template-columns:1fr 1fr}.press-facts{padding:22px}.press-facts dl>div{grid-template-columns:75px 1fr;gap:10px}.press-panel,.press-screen{padding:22px}.press-angles,.press-screens{gap:16px}.press-angles h3{font-size:21px}.press-downloads{gap:24px}}
+@media(max-width:680px){.press-intro{grid-template-columns:1fr;padding:40px 0 36px;gap:32px}.press-intro h1{font-size:48px}.press-intro .lede{font-size:18px}.press-intro .actions{gap:18px}.press-facts dl>div{grid-template-columns:82px 1fr}.press-descriptions,.press-angles,.press-screens,.press-downloads{grid-template-columns:1fr}.press-section{padding-top:32px;margin-bottom:32px}.press-panel,.press-screen,.press-downloads{padding:24px}.press-screen-image img{width:230px}.press-angles{gap:20px}.press-downloads>div+div{border-top:1px solid var(--line);padding-top:24px}.press-contact a{overflow-wrap:anywhere}}
+@media print{.press-intro{padding-top:0;gap:28px}.press-section{margin-bottom:24px;padding-top:24px}.press-panel,.press-facts,.press-downloads{break-inside:avoid;box-shadow:none}.press-screens{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.press-screen{padding:12px;break-inside:avoid}.press-screen-image img{max-width:150px}.press-screen h3{font-size:13pt}.press-screen p{font-size:10pt}.press-contact{display:flex!important}.press-contact .button{display:none}.press-updated{font-size:9pt}}

@@ -1,0 +1,77 @@
+HOMEKEEP PRESS FACT SHEET
+Updated September 26, 2026
+
+APP
+Name: HomeKeep - Home Maintenance
+Developer: Anthony Fasano
+Devices: iPhone and iPad; iOS / iPadOS 17 or later
+Business model: One-time purchase. No subscription.
+Current regional pricing and availability: See the App Store listing.
+Account: No account required.
+
+SHORT DESCRIPTION
+HomeKeep helps homeowners organize recurring maintenance, save checklist progress,
+and keep appliance details together on iPhone and iPad. One purchase, no
+subscription or account required.
+
+LONG DESCRIPTION
+HomeKeep brings recurring home maintenance, reminders, and appliance records into
+one place on iPhone and iPad. Homeowners can see what needs attention, check off
+individual steps, pause a job, and return to their saved progress. Records keep
+model and serial numbers, manual links, purchase dates, warranty reminders, and
+related maintenance together. Completion history and notes help answer "When did
+I last do that?" Users can undo mistakes, choose their reminder time, and postpone
+a reminder without changing the task's due date. HomeKeep is a one-time purchase
+with no subscription or account. Everyday planning works offline, and users can
+export backups of their records.
+
+FEATURES
+- A Home Plan for recurring home maintenance and reminders.
+- Individual checklist steps, saved progress, and a fresh checklist next cycle.
+- Appliance model and serial numbers, manual links, purchase and warranty dates.
+- Warranty reminders and related maintenance tasks.
+- Completion history, notes, corrections, and undo for mistakes.
+- Preferred reminder time; snooze a reminder without changing the due date.
+- Multiple properties, Home Screen widgets, and backup export.
+
+DATA AND SCOPE
+Home records are stored on the device. Everyday planning works offline.
+No account, advertising, tracking, or third-party analytics in the app.
+HomeKeep currently has no iCloud sync or shared household task assignments.
+Online manuals and other external links need an internet connection.
+Users choose where to save or share exports. App data may also be included in
+Apple device backups, depending on device settings.
+
+LINKS
+Website: https://awfasano.github.io/homekeep-site/
+App Store: https://apps.apple.com/us/app/homekeep-home-maintenance/id6760328977
+Press kit: https://awfasano.github.io/homekeep-site/press.html
+Free guides: https://awfasano.github.io/homekeep-site/resources/
+Professional welcome kit: https://awfasano.github.io/homekeep-site/resources/partners.html
+25-second demos: https://awfasano.github.io/homekeep-site/resources/demos.html
+Privacy details: https://awfasano.github.io/homekeep-site/privacy-policy.html
+
+SCREENSHOT CAPTIONS
+homekeep-home-plan.png (1206 x 2622)
+HomeKeep Home Plan: maintenance tasks, reminders, and completion actions at a glance.
+
+homekeep-checklist-progress.png (1206 x 2622)
+HomeKeep saves individual checklist steps so homeowners can resume a partly
+finished job. This screen shows one of six steps completed.
+
+homekeep-appliance-record.png (1206 x 2622)
+An appliance record keeps model, serial, purchase, and warranty details together.
+
+All screenshots are actual iPhone app screens in dark mode. Home, task, and
+appliance details shown are fictional demonstration data.
+
+ASSET USE
+The HomeKeep screenshots and app icon in this kit may be used in editorial coverage
+of HomeKeep. Keep the app identity and interface faithful, label demonstration data
+where relevant, and avoid implying an endorsement.
+Credit: HomeKeep / Anthony Fasano.
+App icon: homekeep-icon-1024.png (1024 x 1024).
+
+EDITORIAL CONTACT
+Anthony Fasano
+awfasano@gmail.com
